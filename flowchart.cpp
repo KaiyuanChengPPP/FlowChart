@@ -6,6 +6,7 @@ using namespace std;
 flowchart::flowchart()
 {
     symbol_array = new Symbol[20];
+    nb_symbol = 0;
 }
 
 flowchart::~flowchart()
@@ -17,7 +18,7 @@ flowchart::~flowchart()
     delete[] symbol_array;
 }
 
-void flowchart::addSymbol(my_symbol ms){
-    nb_symbol++;
+void flowchart::addSymbol(Symbol::my_symbol ms){
     symbol_array[nb_symbol] = ms;
+    nb_symbol++;
 }

@@ -1,16 +1,21 @@
 #ifndef SYMBOL_H
 #define SYMBOL_H
 
-enum my_symbol { If, For, Bloc};
+
+
 
 class Symbol
 {
-    my_symbol ms;
 public:
+    enum my_symbol { If, For, Bloc};
     Symbol();
     Symbol(my_symbol);
     my_symbol getSymbolMeaning();
     void setSymbolMeaning(my_symbol ms);
+    const char* getSymbolText();
+private:
+    my_symbol ms;
+
 };
 
 #endif // SYMBOL_H

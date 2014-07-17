@@ -6,14 +6,12 @@ using namespace std;
 
 class flowchart
 {
-private:
-    Symbol * symbol_array;
-    int nb_symbol;
-
 public:
     flowchart();
     ~flowchart();
-    void addSymbol(my_symbol ms);
+    void addSymbol(Symbol::my_symbol ms);
+    int nb_symbol;
+    Symbol * symbol_array;
 };
 
 #endif // FLOWCHART_H
