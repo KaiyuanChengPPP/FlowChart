@@ -20,7 +20,7 @@
       <x>690</x>
       <y>0</y>
       <width>114</width>
-      <height>221</height>
+      <height>261</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -45,15 +45,29 @@
        </property>
       </widget>
      </item>
+     <item>
+      <widget class="QPushButton" name="buttonlink">
+       <property name="text">
+        <string>Link</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttondelete">
+       <property name="text">
+        <string>Supprimer</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
    <widget class="QGraphicsView" name="graphicsView">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>30</y>
-      <width>361</width>
-      <height>301</height>
+      <x>0</x>
+      <y>10</y>
+      <width>660</width>
+      <height>540</height>
      </rect>
     </property>
    </widget>
@@ -70,30 +84,35 @@
      <string>Quitter</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>550</y>
+      <width>481</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <widget class="QPushButton" name="buttongenerate">
     <property name="geometry">
      <rect>
       <x>680</x>
-      <y>540</y>
+      <y>560</y>
       <width>114</width>
       <height>32</height>
      </rect>
     </property>
     <property name="text">
-     <string>Générer C++</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>430</y>
-      <width>231</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
+     <string>Generate</string>
     </property>
    </widget>
   </widget>

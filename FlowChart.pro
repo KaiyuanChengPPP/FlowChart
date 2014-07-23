@@ -15,11 +15,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     flowchart.cpp \
-    symbol.cpp
+    symbol.cpp \
+    link.cpp
 
 HEADERS  += mainwindow.h \
     flowchart.h \
-    symbol.h
+    symbol.h \
+    link.h
 
 FORMS    += mainwindow.ui
 
