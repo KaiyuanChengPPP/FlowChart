@@ -18,14 +18,13 @@ flowchart::flowchart()
 
 flowchart::~flowchart()
 {
-//    for ( auto it = symbol_array.begin(); it != symbol_array.end(); ++it )
-//    {
-//        delete *it;
-//    }
+    for(Symbol * s: symbols){
+        delete s;
+    }
+    delete scene;
 }
 
 Symbol * flowchart::addSymbol(my_symbol ms){
-    //symbol_array[nb_symbol] = ms;
     nb_symbol++;
 
     Symbol * node = new Symbol(ms);
@@ -76,9 +75,9 @@ void flowchart::sendToBack()
 
 void flowchart::setZValue(int z)
 {
-//    Symbol *node = selectedNode();
-//    if (node)
-//        node->setZValue(z);
+    Symbol *node = selectedNode();
+    if (node)
+        node->setZValue(z);
 }
 
 void flowchart::addLink()
@@ -116,15 +115,6 @@ Symbol *flowchart::selectedNode() const
     }
 }
 
-//void flowchart::properties()
-//{
-//    Symbol *node = selectedNode();
-
-//    if (node) {
-////        PropertiesDialog dialog(node, this);
-////        dialog.exec();
-//    }
-//}
 
 
 flowchart::NodePair flowchart::selectedNodePair() const

@@ -173,17 +173,17 @@ QString Symbol::getcpp(QString res){
     {
         case If :
             //return myText + " \n {"+ then_link->toNode()->to_link->toNode()->getcpp(res) + "} \n else { \n" + else_link->toNode()->to_link->toNode()->getcpp(res) + "}";
-            return myText + " { \n "+ then_link->toNode()->to_link->toNode()->getcpp(res) + "\n } else { \n" + else_link->toNode()->to_link->toNode()->getcpp(res);
+            return myText + then_link->toNode()->getcpp(res);
         case For :
-            return "For";
+            return myText + "{ \n" + then_link->toNode()->getcpp(res) + "\n }";
         case Bloc :
             return myText;
         case Then :
-            return "{"+ to_link->toNode()->getcpp(res) + "}";
+            return "{ \n"+ to_link->toNode()->getcpp(res) + " \n }";
         case Else :
-            return " else {" + to_link->toNode()->getcpp(res) + "}";
+            return " else { \n" + to_link->toNode()->getcpp(res) + "\n }";
         case ForBloc :
-            return "Instructions";
+            return to_link->toNode()->getcpp(res);
         default:
            return "";
       }

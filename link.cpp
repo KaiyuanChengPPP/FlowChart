@@ -72,20 +72,7 @@ void Link::setColor(const QColor &color)
 void Link::trackNodes()
 {
     if (myFromNode!= NULL && myToNode != NULL){
-//        if (myFromNode->getSymbolMeaning() == For && myToNode->getSymbolMeaning() == Bloc){
-//            QPointF point = QPointF(myFromNode->pos().x(),myToNode->pos().y());
-//            setLine(QLineF(myFromNode->pos(), point));
-//            setLine(QLineF(point, myToNode->pos()));
-
-//        }
-//        else if (myFromNode->getSymbolMeaning() == Bloc && myToNode->getSymbolMeaning() == For) {
-//            QPointF point = QPointF(myToNode->pos().x(),myFromNode->pos().y());
-//            setLine(QLineF(myFromNode->pos(), point));
-//            setLine(QLineF(point, myToNode->pos()));
-//        }
-//        else
-            setLine(QLineF(myFromNode->pos(), myToNode->pos()));
-
+        setLine(QLineF(myFromNode->pos(), myToNode->pos()));
     }
 }
 

@@ -7,31 +7,18 @@
 #include <flowchart.h>
 using namespace std;
 
-//enum my_symbol { If, For, Bloc};
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
-    //scene = new QGraphicsScene(0, 0, 650, 530);
-
-    //view = new QGraphicsView;
-
-    //setCentralWidget(view);
-
-    //createActions();
-    //createMenus();
-    //createToolBars();
-
-
-    //view->show();
-    setWindowTitle(tr("Diagram"));
+    setWindowTitle(tr("FlowChart"));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
     delete current_flowchart;
+    delete view;
 }
 
 void MainWindow::init()
